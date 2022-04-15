@@ -29,11 +29,6 @@ function currtime() {
     return time;
 }
 
-// Message area scroll to bottom every 100ms
-window.setInterval(() => {
-    msgarea.scrollTop = msgarea.scrollHeight;
-}, 100);
-
 // Show All Users toggle via details and cross btn
 detail.addEventListener("click", () => {
     showusers.classList.toggle("show");
