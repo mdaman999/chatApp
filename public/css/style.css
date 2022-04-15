@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Page 1 */
+#infobox {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+#logo{
+  align-self: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url("/public/images/icon7.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  border: 2px solid #000;
+  order: -3;
+}
+#entryname {
+  padding: 10px;
+  margin-top: 30px;
+  order: -2;
+}
+#enter {
+  letter-spacing: 5px;
+  border-radius: 7px;
+  padding: 10px;
+  border: none;
+  font-weight: 700;
+  background-color: greenyellow;
+  text-transform: uppercase;
+}
+#note{
+  color: #878787;
+  font-size: 12px; 
+}
+.err{
+color: red;
+order: -1;
+font-size: 12px;
+}
+
+/* Page 2 */
+#box {
+  width: 50%;
+  height: 90%;
+  display: none;
+  flex-direction: column;
+  background-color: #000;
+}
+
+/* header work */
+#header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+}
+#head {
+  color: #fff;
+  align-self: center;
+  margin-left: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#profile {
+  color: #fff;
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+#dp {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+#detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: default;
+}
+
+#status {
+  color: greenyellow;
+  font-size: 12px;
+  cursor: default;
+}
+
+.showusers {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+}
+.show{
+  display: flex;
+}
+.otheruser,.you{
+color: #000;
+background-color: #fff;
+padding: 2px 5px;
+border-radius: 5px;
+margin: 5px 0;
+}
+.you{
+ background-color: greenyellow;
+ order: -1;
+}
+.subhead{
+  width: 100%;
+  color: #fff;
+  font-size: 25px;
+  text-align: end;
+}
+.userstack{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* message area */
+#msgarea {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+#msgarea::-webkit-scrollbar {
+  width: 0;
+}
+.con,
+.leave {
+  align-self: center;
+  border-radius: 10px;
+  margin: 5px 0 5px 0;
+  font-size: 12px;
+  padding: 5px;
+  background-color: rgb(135, 248, 178);
+}
+.leave {
+  background-color: rgb(247, 95, 120);
+}
+
+.me {
+  align-self: flex-end;
+}
+.user {
+  align-self: flex-start;
+}
+.mymsg,
+.usermsg {
+  font-size: 13px;
+  padding: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: #fff;
+  background-color: #000;
+  align-self: flex-end;
+  max-width: 40%;
+  height: auto;
+}
+.usermsg {
+  color: #000;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 15px;
+  background-color: #cdcdcd;
+  align-self: flex-start;
+}
+.mytime,
+.usertime {
+  color: gray;
+  margin-left: auto;
+  margin-bottom: 7px;
+  align-self: flex-end;
+  max-width: 40%;
+  height: auto;
+}
+.usertime {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* footer work */
+#footer {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#textarea {
+  width: 90%;
+  height: 40px;
+  padding: 10px;
+  overflow: auto;
+  resize: none;
+  border-radius: 30px;
+}
+#textarea::-webkit-scrollbar {
+  width: 0;
+}
+#textarea:focus {
+  outline: none;
+}
+#send {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: rgb(11, 181, 248);
+  font-size: 20px;
+}
+
+/* For Android */
+@media screen and (max-width: 500px) {
+  #infobox{
+    width: 95%;
+  }
+  #header {
+    height: 80px;
+  }
+  #box {
+    width: 100%;
+    height: 100%;
+  }
+  #mydiv,
+  #userdiv {
+    max-width: 50%;
+  }
+  #footer {
+    height: 80px;
+  }
+}
