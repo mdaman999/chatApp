@@ -5,19 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unusual Chat App</title>
     <link rel="stylesheet" href="/public/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <audio id="audio" src="/public/music/ting.mp3" style="display: none;"></audio>
-  <!-- Page 1 -->
-    <div method="post" id="infobox">
-      <div id="logo"></div><br/>
-      <input type="text" id="entryname" name="entryname" placeholder="Enter your Name" required /><br/>
-      <input type="submit" id="enter" value="Enter" /><br/>
-      <p id="note">Note:It does not store your messages. Once you refresh the page all message will be disappear</p>
+    <!-- Audio -->
+    <audio
+      id="audio"
+      src="/public/music/ting.mp3"
+      style="display: none"
+    ></audio>
+
+    <!-- Page 1 -->
+    <div id="infobox">
+      <div id="logo"></div>
+      <br />
+      <input
+        type="text"
+        id="entryname"
+        name="entryname"
+        placeholder="Enter your Name"
+      /><br />
+      <input type="submit" id="enter" value="Enter" /><br />
+      <p id="note">
+        Note:It does not store your messages. Once you refresh the page all
+        message will be disappear
+      </p>
     </div>
 
-  <!-- Page 2 -->
+    <!-- Page 2 -->
     <div id="box">
       <div id="header">
         <div id="profile">
@@ -29,14 +50,17 @@
         </div>
         <h3 id="head">Unusual Group Chat</h3>
       </div>
-      
+
+      <!-- user list -->
       <div class="showusers">
         <div class="subhead"><i id="cross" class="fa-solid fa-xmark"></i></div>
         <div class="userstack"></div>
       </div>
 
+      <!-- msg area -->
       <div id="msgarea"></div>
 
+      <!-- footer -->
       <div id="footer">
         <textarea id="textarea" placeholder="Write a message..."></textarea>
         <div id="send"><i class="fa-solid fa-paper-plane"></i></div>

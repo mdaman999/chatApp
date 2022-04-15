@@ -12,7 +12,6 @@ var msgarea = document.getElementById('msgarea');
 var send = document.getElementById('send');
 var count = document.getElementById('count');
 var audio = document.getElementById('audio');
-// var ting=new Audio('../music/ting.mp3');
 var val = "";
 var name = "";
 var exist = 0;
@@ -31,9 +30,9 @@ function currtime() {
 }
 
 // Message area scroll to bottom every 100ms
-window.setInterval(()=>{
-    msgarea.scrollTop=msgarea.scrollHeight;
-},100);
+window.setInterval(() => {
+    msgarea.scrollTop = msgarea.scrollHeight;
+}, 100);
 
 // Show All Users toggle via details and cross btn
 detail.addEventListener("click", () => {
@@ -114,16 +113,16 @@ function createspan(kisne, type) {
 }
 
 // Create users list dynamically
-function createuser(userOBJ){
-    var idARR=Object.keys(userOBJ);
-    var nameARR=Object.values(userOBJ);
-    userstack.innerHTML="";
-    for(var i=0;i<idARR.length;i++){
+function createuser(userOBJ) {
+    var idARR = Object.keys(userOBJ);
+    var nameARR = Object.values(userOBJ);
+    userstack.innerHTML = "";
+    for (var i = 0; i < idARR.length; i++) {
         var userspan = document.createElement("span");
         userstack.appendChild(userspan);
-        if(idARR[i]==socket.id){
+        if (idARR[i] == socket.id) {
             userspan.classList.add("you");
-            userspan.appendChild(document.createTextNode("You:"+nameARR[i]));
+            userspan.appendChild(document.createTextNode("You:" + nameARR[i]));
         }
         else {
             userspan.classList.add("otheruser");
@@ -144,4 +143,4 @@ socket.on('join_kisne_kiya', function (isne_join_kiya) { createspan(isne_join_ki
 socket.on('chat_ka_msg', function (iska_msg, ye_msg) { creatediv(iska_msg, ye_msg, 'outgoing'); });
 socket.on('leave_kisne_kiya', function (isne_left_kiya) { createspan(isne_left_kiya, 'leaving'); });
 socket.on('kitne_log', function (itne_log) { count.innerHTML = itne_log; });
-socket.on('ye_log',function (userOBJ){ createuser(userOBJ);});
+socket.on('ye_log', function (userOBJ) { createuser(userOBJ); });
