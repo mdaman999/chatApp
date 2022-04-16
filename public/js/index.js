@@ -35,8 +35,9 @@ detail.addEventListener("click", () => {
 });
 cross.addEventListener("click", () => {
     showusers.classList.toggle("show");
-
 });
+
+
 
 // take message
 textarea.addEventListener("keyup", (e) => {
@@ -91,6 +92,7 @@ function creatediv(kisne, kya, type) {
     }
     newh5.appendChild(document.createTextNode(kisne));
     newh6.appendChild(document.createTextNode(currtime()));
+    msgarea.scrollTop=msgarea.scrollHeight;
 }
 
 // Create status span(join or left) dynamically

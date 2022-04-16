@@ -144,7 +144,7 @@ body {
 /* message area */
 #msgarea {
   width: 100%;
-  height: 80%;
+  height: calc(100vh - 120px);
   overflow-y: scroll;
   background-color: #efefef;
   display: flex;
