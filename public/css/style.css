@@ -58,10 +58,8 @@ body {
 
 /* Page 2 */
 #box {
-  position: absolute;
-  bottom: 0;
   width: 50%;
-  height: 100vh;
+  height: 90vh;
   display: none;
   flex-direction: column;
   background-color: #000;
@@ -246,14 +244,26 @@ body {
 
 /* For Android */
 @media screen and (max-width: 500px) {
+  body{
+    background-color: #000;
+  }
   #infobox {
     width: 95%;
+    border: 2px solid #fff;
+  }
+  #entryname{
+    border: none;
+    border-radius: 5px;
   }
   #header {
     height: 80px;
   }
   #box {
     width: 100%;
+    height: 100vh;
+  }
+  #msgarea{
+    height: 65%;
   }
   #mydiv,
   #userdiv {
